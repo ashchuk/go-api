@@ -10,7 +10,7 @@ import (
 func main() {
 	router := gin.Default()
 
-	r // This handler will match /user/john but will not match /user/ or /user
+	// This handler will match /user/john but will not match /user/ or /user
 	router.GET("/user/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		c.String(http.StatusOK, "Hello %s", name)
